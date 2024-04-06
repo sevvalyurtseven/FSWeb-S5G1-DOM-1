@@ -74,3 +74,9 @@ document.querySelector("h1").textContent = siteContent.cta["h1"];
 
 document.querySelector(".cta-text button").textContent =
   siteContent.cta["button"];
+
+// cta-img id'sine sahip img elementini sectikten sonra src degerini ayarlayalim.
+
+document
+  .querySelector("#cta-img")
+  .setAttribute("src", siteContent.images["cta-img"]);
