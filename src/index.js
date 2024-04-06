@@ -80,3 +80,13 @@ document.querySelector(".cta-text button").textContent =
 document
   .querySelector("#cta-img")
   .setAttribute("src", siteContent.images["cta-img"]);
+
+//querySelectorAll ile top-content class'i icerisindeki text-content classlarini secelim. Bu classlarin icerisindeki h4 elementlerinin icerisindeki metinleri textContent ile ayarlayalim.
+
+const mainContentTexts = document.querySelectorAll(
+  ".top-content .text-content"
+);
+
+mainContentTexts[0].textContent = siteContent["ana-içerik"]["özellikler-h4"];
+
+mainContentTexts[1].textContent = siteContent["ana-içerik"]["hakkımızda-h4"];
