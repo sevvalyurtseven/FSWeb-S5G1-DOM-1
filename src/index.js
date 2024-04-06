@@ -102,3 +102,9 @@ mainContentTexts2[0].textContent =
 
 mainContentTexts2[1].textContent =
   siteContent["ana-içerik"]["hakkımızda-içerik"];
+
+//middle-img id'sine sahip img elementini sectikten sonra src degerini ayarlayalim.
+
+document
+  .querySelector("#middle-img")
+  .setAttribute("src", siteContent.images["accent-img"]);
