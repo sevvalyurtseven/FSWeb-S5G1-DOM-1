@@ -111,7 +111,7 @@ document
 
 //bottom-content class'i icerisindeki text-content classlarinin icindeki h4 elementlerini secelim. Bu classlarin icerisindeki h4 elementlerinin icerisindeki metinleri textContent ile ayarlayalim.
 
-const bottomContentTexts = document.querySelectorAll(
+/* const bottomContentTexts = document.querySelectorAll(
   ".bottom-content .text-content h4"
 );
 
@@ -134,7 +134,34 @@ bottomContentTexts2[1].textContent =
   siteContent["ana-içerik"]["ürünler-içeriği"];
 
 bottomContentTexts2[2].textContent =
-  siteContent["ana-içerik"]["vizyon-içeriği"];
+  siteContent["ana-içerik"]["vizyon-içeriği"]; */
+
+// Ayni çözümü forEach ile yapalım.
+
+const bottomContentTexts = document.querySelectorAll(
+  ".bottom-content .text-content"
+);
+
+bottomContentTexts.forEach((element, i) => {
+  let bottomContentTextsArr = ["servisler", "ürünler", "vizyon"];
+  element.querySelector("h4").textContent =
+    siteContent["ana-içerik"][`${bottomContentTextsArr[i]}-h4`];
+  element.querySelector("p").textContent =
+    siteContent["ana-içerik"][`${bottomContentTextsArr[i]}-içeriği`];
+});
+
+//Bütün ana icerigi object keys kullanarak da alabilirdik:
+
+/* 
+const contentAll = document.querySelectorAll(".text-content");
+
+let keys = Object.keys(siteContent["ana-içerik"]);
+
+contentAll.forEach((element, i) => {
+  element.querySelector("h4").textContent = siteContent["ana-içerik"][keys[2 * i]];
+  element.querySelector("p").textContent =
+    siteContent["ana-içerik"][keys[2 * i + 1]];
+})
 
 // contact class'i icerisindeki h4 ve p elementlerini secelim. Bu elementlerin icerisindeki metinleri textContent ile ayarlayalim.
 
@@ -147,7 +174,7 @@ document.querySelectorAll(".contact p")[0].textContent =
 document.querySelectorAll(".contact p")[1].textContent =
   siteContent["iletisim"]["telefon"];
 
-document.querySelectorAll(".contact p")[1].textContent =
+document.querySelectorAll(".contact p")[2].textContent =
   siteContent["iletisim"]["email"];
 
 // footer icerisindeki a elementini secelim. Bu elemente class ekleyelim.
