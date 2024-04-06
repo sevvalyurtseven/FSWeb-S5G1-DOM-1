@@ -81,10 +81,10 @@ document
   .querySelector("#cta-img")
   .setAttribute("src", siteContent.images["cta-img"]);
 
-//querySelectorAll ile top-content class'i icerisindeki text-content classlarini secelim. Bu classlarin icerisindeki h4 elementlerinin icerisindeki metinleri textContent ile ayarlayalim.
+//querySelectorAll ile top-content class'i icerisindeki text-content classlarinin icindeki h4 elementlerini secelim. Bu classlarin icerisindeki h4 elementlerinin icerisindeki metinleri textContent ile ayarlayalim.
 
 const mainContentTexts = document.querySelectorAll(
-  ".top-content .text-content"
+  ".top-content .text-content h4"
 );
 
 mainContentTexts[0].textContent = siteContent["ana-içerik"]["özellikler-h4"];
