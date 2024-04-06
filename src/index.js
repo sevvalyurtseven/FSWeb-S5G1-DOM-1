@@ -119,6 +119,8 @@ bottomContentTexts[0].textContent = siteContent["ana-içerik"]["servisler-h4"];
 
 bottomContentTexts[1].textContent = siteContent["ana-içerik"]["ürünler-h4"];
 
+bottomContentTexts[2].textContent = siteContent["ana-içerik"]["vizyon-h4"];
+
 //Ayni islemi p elementleri icin yapalim:
 
 const bottomContentTexts2 = document.querySelectorAll(
@@ -130,3 +132,20 @@ bottomContentTexts2[0].textContent =
 
 bottomContentTexts2[1].textContent =
   siteContent["ana-içerik"]["ürünler-içeriği"];
+
+bottomContentTexts2[2].textContent =
+  siteContent["ana-içerik"]["vizyon-içeriği"];
+
+// contact class'i icerisindeki h4 ve p elementlerini secelim. Bu elementlerin icerisindeki metinleri textContent ile ayarlayalim.
+
+document.querySelector(".contact h4").textContent =
+  siteContent["iletisim"]["iletişim-h4"];
+
+document.querySelectorAll(".contact p")[0].textContent =
+  siteContent["iletisim"]["adres"];
+
+document.querySelectorAll(".contact p")[1].textContent =
+  siteContent["iletisim"]["telefon"];
+
+document.querySelectorAll(".contact p")[1].textContent =
+  siteContent["iletisim"]["email"];
