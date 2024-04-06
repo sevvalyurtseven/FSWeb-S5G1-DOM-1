@@ -90,3 +90,15 @@ const mainContentTexts = document.querySelectorAll(
 mainContentTexts[0].textContent = siteContent["ana-içerik"]["özellikler-h4"];
 
 mainContentTexts[1].textContent = siteContent["ana-içerik"]["hakkımızda-h4"];
+
+// Aynı işlemi p elementi icin yapalım:
+
+const mainContentTexts2 = document.querySelectorAll(
+  ".top-content .text-content p"
+);
+
+mainContentTexts2[0].textContent =
+  siteContent["ana-içerik"]["özellikler-içerik"];
+
+mainContentTexts2[1].textContent =
+  siteContent["ana-içerik"]["hakkımızda-içerik"];
