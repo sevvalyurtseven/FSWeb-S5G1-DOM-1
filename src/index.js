@@ -108,3 +108,25 @@ mainContentTexts2[1].textContent =
 document
   .querySelector("#middle-img")
   .setAttribute("src", siteContent.images["accent-img"]);
+
+//bottom-content class'i icerisindeki text-content classlarinin icindeki h4 elementlerini secelim. Bu classlarin icerisindeki h4 elementlerinin icerisindeki metinleri textContent ile ayarlayalim.
+
+const bottomContentTexts = document.querySelectorAll(
+  ".bottom-content .text-content h4"
+);
+
+bottomContentTexts[0].textContent = siteContent["ana-içerik"]["servisler-h4"];
+
+bottomContentTexts[1].textContent = siteContent["ana-içerik"]["ürünler-h4"];
+
+//Ayni islemi p elementleri icin yapalim:
+
+const bottomContentTexts2 = document.querySelectorAll(
+  ".bottom-content .text-content p"
+);
+
+bottomContentTexts2[0].textContent =
+  siteContent["ana-içerik"]["servisler-içeriği"];
+
+bottomContentTexts2[1].textContent =
+  siteContent["ana-içerik"]["ürünler-içeriği"];
