@@ -149,3 +149,11 @@ document.querySelectorAll(".contact p")[1].textContent =
 
 document.querySelectorAll(".contact p")[1].textContent =
   siteContent["iletisim"]["email"];
+
+// footer icerisindeki a elementini secelim. Bu elemente class ekleyelim.
+
+document.querySelector("footer a").classList.add("bold");
+
+//Bu elemente metin ekleyelim.
+
+document.querySelector("footer a").textContent = siteContent.footer.copyright;
