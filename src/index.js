@@ -49,11 +49,19 @@ console.log("Proje açıldı!");
 
 /* Kodlar Buradan aşağıya */
 
-//Header'in icindeki nav'in icindeki a'lari secelim. Daha sonra for döngüsuyle her bir a'nin setAttribute ile class'ini italic yapalım. Daha sonra textContent ile her bir a'nin textini ayarlayalım.
+//Header'in icindeki nav'in icindeki a'lari secelim. Daha sonra for döngüsuyle her bir a'nin setAttribute ile class'ini italic yapalım. (bunu classList ile de yapabiliriz). Daha sonra textContent ile her bir a'nin textini ayarlayalım.
 
 const navItems = document.querySelectorAll("header nav a");
 
 for (let i = 0; i < navItems.length; i++) {
-  navItems[i].setAttribute("class", "italic");
+  /* navItems[i].setAttribute("class", "italic"); */
+  navItems[i].classList.add("italic");
+
   navItems[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
 }
+
+// img icin source degerini ayarlayalim. Bunun icin ilk önce querySelector ile img'i secelim. Sonra setAttribute ile src degerini ayarlayalim.
+
+const logoImg = document.querySelector("#logo-img");
+
+logoImg.setAttribute("src", siteContent.images["logo-img"]);
