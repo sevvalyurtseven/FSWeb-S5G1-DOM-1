@@ -162,6 +162,7 @@ contentAll.forEach((element, i) => {
   element.querySelector("p").textContent =
     siteContent["ana-içerik"][keys[2 * i + 1]];
 })
+*/
 
 // contact class'i icerisindeki h4 ve p elementlerini secelim. Bu elementlerin icerisindeki metinleri textContent ile ayarlayalim.
 
