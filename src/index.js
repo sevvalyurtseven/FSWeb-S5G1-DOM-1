@@ -68,6 +68,9 @@ logoImg.setAttribute("src", siteContent.images["logo-img"]);
 
 // h1 elementini secip textContent ile icerisine metin ekleyelim.
 
-const h1 = document.querySelector("h1");
+document.querySelector("h1").textContent = siteContent.cta["h1"];
 
-h1.textContent = siteContent.cta["h1"];
+// cta-text class'inin altindaki butonu secip icerisine textContent ile metin ekleyelim.
+
+document.querySelector(".cta-text button").textContent =
+  siteContent.cta["button"];
