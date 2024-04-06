@@ -65,3 +65,9 @@ for (let i = 0; i < navItems.length; i++) {
 const logoImg = document.querySelector("#logo-img");
 
 logoImg.setAttribute("src", siteContent.images["logo-img"]);
+
+// h1 elementini secip textContent ile icerisine metin ekleyelim.
+
+const h1 = document.querySelector("h1");
+
+h1.textContent = siteContent.cta["h1"];
