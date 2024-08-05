@@ -185,3 +185,19 @@ document.querySelector("footer a").classList.add("bold");
 //Bu elemente metin ekleyelim.
 
 document.querySelector("footer a").textContent = siteContent.footer.copyright;
+
+class MyClass {
+  #x = 0;
+
+  add(val) {
+    this.#x += val;
+  }
+
+  getX() {
+    return this.#x;
+  }
+}
+
+const myObj = new MyClass();
+myObj.add(5);
+console.log(myObj.getX()); // 5
